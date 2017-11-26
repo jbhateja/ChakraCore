@@ -49,16 +49,16 @@ namespace Js
             {
                 switch (var.which())
                 {
-                case AsmJsType::Int32x4:
+                case AsmJsVarType::Int32x4:
                     Output::Print(_u("I4(In%hu)"), i);
                     break;
-                case AsmJsType::Int8x16:
+                case AsmJsVarType::Int8x16:
                     Output::Print(_u("I16(In%hu)"), i);
                     break;
-                case AsmJsType::Float32x4:
+                case AsmJsVarType::Float32x4:
                     Output::Print(_u("F4(In%hu)"), i);
                     break;
-                case AsmJsType::Float64x2:
+                case AsmJsVarType::Float64x2:
                     Output::Print(_u("D2(In%hu)"), i);
                     break;
                 }

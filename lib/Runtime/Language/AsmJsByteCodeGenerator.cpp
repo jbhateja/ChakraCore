@@ -1557,15 +1557,15 @@ namespace Js
 
         switch (retType.which())
         {
-        case AsmJsType::Signed:
+        case AsmJsRetType::Signed:
             dst = mFunction->AcquireTmpRegister<int>();
             dstType = AsmJsType::Signed;
             break;
-        case AsmJsType::Unsigned:
+        case AsmJsRetType::Unsigned:
             dst = mFunction->AcquireTmpRegister<int>();
             dstType = AsmJsType::Unsigned;
             break;
-        case AsmJsType::Float:
+        case AsmJsRetType::Float:
             dst = mFunction->AcquireTmpRegister<float>();
             dstType = AsmJsType::Float;
             break;

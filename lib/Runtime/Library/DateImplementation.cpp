@@ -1699,7 +1699,7 @@ LError:
         uint ivar;
 
         // PREFAST: check limits
-        if (dd < 0 || dd >= DateData::Lim)
+        if (dd >= DateData::Lim)
         {
             AssertMsg(false, "DateData type invalid");
             Js::JavascriptError::ThrowError(scriptContext, VBSERR_InternalError);

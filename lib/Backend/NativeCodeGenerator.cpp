@@ -748,10 +748,6 @@ NativeCodeGenerator::IsValidVar(const Js::Var var, Recycler *const recycler)
 #endif
 
     const TypeId typeId = type->GetTypeId();
-    if(typeId < static_cast<TypeId>(0))
-    {
-        return false;
-    }
     if(!DynamicType::Is(typeId))
     {
         return true;

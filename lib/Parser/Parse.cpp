@@ -12242,7 +12242,7 @@ ParseNodePtr Parser::CreateNode(OpCode nop, charcount_t ichMin, charcount_t ichL
     Assert(nop >= 0 && nop < knopLim);
     ParseNodePtr pnode;
     __analysis_assume(nop < knopLim);
-    int cb = nop >= 0 && nop < knopLim ? g_mpnopcbNode[nop] : kcbPnNone;
+    int cb = nop < knopLim ? g_mpnopcbNode[nop] : kcbPnNone;
 
     pnode = (ParseNodePtr)m_nodeAllocator.Alloc(cb);
     Assert(pnode);

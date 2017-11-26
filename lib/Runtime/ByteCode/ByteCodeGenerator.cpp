@@ -564,7 +564,7 @@ bool IsExpressionStatement(ParseNode* stmt, const Js::ScriptContext *const scrip
         // declaration does not produce a value for the program.
         return !stmt->sxFnc.IsDeclaration();
     }
-    if ((stmt->nop >= 0) && (stmt->nop<knopLim))
+    if (stmt->nop<knopLim)
     {
         return (ParseNode::Grfnop(stmt->nop) & fnopNotExprStmt) == 0;
     }

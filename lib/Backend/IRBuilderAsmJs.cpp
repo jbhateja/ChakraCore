@@ -1122,7 +1122,7 @@ IRBuilderAsmJs::BuildEmpty(Js::OpCodeAsmJs newOpcode, uint32 offset)
             regOpnd->SetValueType(ValueType::Float);
             break;
 
-        case Js::AsmJsVarType::Which::Int64:
+        case Js::AsmJsRetType::Which::Int64:
             retSlot = GetRegSlotFromInt64Reg(0);
             regOpnd = BuildDstOpnd(retSlot, TyInt64);
             regOpnd->SetValueType(ValueType::GetInt(false));

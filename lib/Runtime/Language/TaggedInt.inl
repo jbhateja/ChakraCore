@@ -15,7 +15,11 @@ namespace Js
 #endif
     inline bool TaggedInt::IsOverflow(int32 nValue)
     {
+#if !defined(INT32VAR)
         return (nValue < k_nMinValue) || (nValue > k_nMaxValue);
+#else
+        return false;
+#endif
     }
 
     inline bool TaggedInt::IsOverflow(uint32 nValue)
